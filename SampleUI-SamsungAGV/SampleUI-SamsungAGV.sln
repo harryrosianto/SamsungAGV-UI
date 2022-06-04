@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleUI-SamsungAGV", "SampleUI-SamsungAGV.csproj", "{3B8BF78D-995B-4E30-86AE-5B115163EFCA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3B8BF78D-995B-4E30-86AE-5B115163EFCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B8BF78D-995B-4E30-86AE-5B115163EFCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B8BF78D-995B-4E30-86AE-5B115163EFCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B8BF78D-995B-4E30-86AE-5B115163EFCA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {869C2998-95B7-4BBF-90F0-12CDD84D0415}
+	EndGlobalSection
+EndGlobal
