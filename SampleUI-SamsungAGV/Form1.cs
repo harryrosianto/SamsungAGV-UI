@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -47,12 +47,6 @@ namespace SampleUI_SamsungAGV
             double scaled = minScale + (double)(value - min) / (max - min) * (maxScale - minScale);
             return scaled;
         }
-
-        private void pictureBox23_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void activeLine(bool l1, bool l2, bool l3, bool l4, bool l5, bool l6)
         {
             send1.Visible = l1; send2.Visible = l2; send3.Visible = l3; send4.Visible = l4; send5.Visible = l5; send6.Visible = l6;
@@ -196,22 +190,21 @@ namespace SampleUI_SamsungAGV
 
             string[] arrayRFID_P1 = new string[] { "9","0", "1", "2", "4", "5", "19", "20", "21", "22", "23", "24", "10", "11", "31", "32", "33", "34",
                                                 "15", "16","37", "38","39", "40","41", "42" ,"8"};
-            int[] arrayRfidLoc_X_P1 = new int[] {rfid129.Location.X,0,rfid1.Location.X,rfid2.Location.X,rfid119.Location.X,rfid116.Location.X, rfid131.Location.X,rfid120.Location.X,rfid121.Location.X,
-                                              rfid122.Location.X,rfid123.Location.X,rfid124.Location.X,rfid128.Location.X,rfid11.Location.X,rfid31.Location.X,rfid32.Location.X,rfid33.Location.X,
+            int[] arrayRfidLoc_X_P1 = new int[] {rfid9.Location.X,0,rfid1.Location.X,rfid2.Location.X,rfid4.Location.X,rfid5.Location.X, rfid19.Location.X,rfid20.Location.X,rfid21.Location.X,
+                                              rfid22.Location.X,rfid23.Location.X,rfid24.Location.X,rfid10.Location.X,rfid11.Location.X,rfid31.Location.X,rfid32.Location.X,rfid33.Location.X,
                                               rfid34.Location.X,rfid15.Location.X,rfid16.Location.X,rfid37.Location.X,rfid38.Location.X,rfid39.Location.X,rfid40.Location.X,rfid41.Location.X,
                                               rfid42.Location.X,rfid8.Location.X};
-            int[] arrayRfidLoc_Y_P1 = new int[] {rfid129.Location.Y,0,rfid1.Location.Y,rfid2.Location.Y,rfid119.Location.Y,rfid116.Location.Y, rfid131.Location.Y,rfid120.Location.Y,rfid121.Location.Y,
-                                              rfid122.Location.Y,rfid123.Location.Y,rfid124.Location.Y,rfid128.Location.Y,rfid11.Location.Y,rfid31.Location.Y,rfid32.Location.Y,rfid33.Location.Y,
+            int[] arrayRfidLoc_Y_P1 = new int[] {rfid9.Location.Y,0,rfid1.Location.Y,rfid2.Location.Y,rfid4.Location.Y,rfid5.Location.Y, rfid19.Location.Y,rfid20.Location.Y,rfid21.Location.Y,
+                                              rfid22.Location.Y,rfid23.Location.Y,rfid24.Location.Y,rfid10.Location.Y,rfid11.Location.Y,rfid31.Location.Y,rfid32.Location.Y,rfid33.Location.Y,
                                               rfid34.Location.Y,rfid15.Location.Y,rfid16.Location.Y,rfid37.Location.Y,rfid38.Location.Y,rfid39.Location.Y,rfid40.Location.Y,rfid41.Location.Y,
                                               rfid42.Location.Y,rfid8.Location.Y};
             //==================================================================== PHASE 2 ==============================================================// -->
-            //                                         128     129     126     127     46     131     13     130                                    >
-            //                                         125     124     123     122     121    120     2                                             >>
-            //                                         119     1       117     11      56     54      53     52     31     32                       >>>
-            //                                         33      34      15      16      37     38      39     40     41     42     43     44     8   >>>>       
-            //                                         30      118     101     116     48     49      102    103                                    >>>>>       
-            //                                         104     105     106     107     108    109     110    111    112    113    114    115    8   >>>>>>
-
+            //                                         9          0            1            2           4           5          130         19          125         20         120    >
+            //                                         21         121          22           122         23          123        24          124         10          11          30    >>
+            //                                         101        102          103          56          54          53         52          31          32                            >>>           
+            //                                         33         34           15           16          37          38         39          40          41          42  >>>>       
+            //                                         104        105          106          107         108         109        110         111         112         113 >>>>>       
+            //                                         114        115          116
             string[] arrayPosition = new string[] {"WIP ENDING","STANDBY", "GO TO LINE", "GO TO LINE","PARKING AREA", "HOME","WIP FULL", "WIP-IN-6","WIP-IN-12", "WIP-IN-1","WIP-IN-7",
                                                    "WIP-IN-2", "WIP-IN-8", "WIP-IN-3", "WIP-IN-9", "WIP-IN-4", "WIP-IN-10","WIP-IN-5","WIP-IN-11", "WIP-OUT-1", "LOW SPEED", "GO TO LINE", 
                                                    "GO TO LINE","GO TO LINE","TURN TO R2","OTR","OTR","OTR","LOW SPEED R1","TURN TO R1","TURN TO R1",
@@ -219,26 +212,23 @@ namespace SampleUI_SamsungAGV
                                                    tbox7.Text,tbox7.Text,tbox8.Text,tbox8.Text,tbox9.Text,tbox9.Text,tbox10.Text,textBox10.Text,tbox11.Text,textBox11.Text,
                                                    tbox12.Text,textBox12.Text,"LINE ENDING"};
 
-            string[] arrayRFID = new string[] { "128","129","126","127","46","131","13","130",                                                      //HOME to WIP
-                                                "125","124","123","122","121","120","2",                                                            //WIP to LINE
-                                                "119","1","117","11","56","54","53","52","31","32",                                                 //to Line 1-6
-                                                "33", "34", "15","16","37","38","39","40","41","42","43","44","8",                                  //Line 1-6
-                                                "30","118","101","116","48","49","102","103",                                                       //to Line 7-12
-                                                "104","105","106","107","108,","109","110","111","112","113","114","115" ,"8"};                     //Line 7-12
+            string[] arrayRFID = new string[] { "9","0", "1", "2", "4", "5","130", "19","125", "20","120", "21","121","22","122", "23","123", "24","124",
+                                                "10", "11","30","101","102","103","56","54","53","52", "31", "32",                                           //WIP to LINE
+                                                "33", "34","15", "16","37", "38","39", "40","41", "42","43","44",                                            //Line 1-6
+                                                "104","105","106","29","30","45","46","47","48","49","50","51","52","53","54","55","56" ,"116"};             //Line 7-12
+            int[] arrayRfidLoc_X = new int[] {rfid9.Location.X,0,rfid1.Location.X,rfid2.Location.X,rfid4.Location.X,rfid5.Location.X,rfid130.Location.X, rfid19.Location.X,rfid20.Location.X,rfid20.Location.X,
+                                              rfid21.Location.X,rfid22.Location.X,rfid22.Location.X,rfid22.Location.X,rfid23.Location.X,rfid23.Location.X,rfid24.Location.X,rfid24.Location.X,rfid10.Location.X,rfid11.Location.X,rfid30.Location.X,
+                                              rfid101.Location.X,rfid102.Location.X,rfid103.Location.X,rfid56.Location.X,rfid54.Location.X,rfid53.Location.X,rfid52.Location.X,rfid31.Location.X,rfid32.Location.X,
+                                              rfid33.Location.X,rfid34.Location.X,rfid15.Location.X,rfid16.Location.X,rfid37.Location.X,rfid38.Location.X,rfid39.Location.X,rfid40.Location.X,rfid41.Location.X,rfid42.Location.X,
+                                              rfid_104.Location.X,rfid_105.Location.X,rfid_106.Location.X,rfid_107.Location.X,rfid_108.Location.X,rfid_109.Location.X,rfid_110.Location.X,rfid_111.Location.X,rfid_112.Location.X,rfid_113.Location.X,
+                                              rfid_114.Location.X,rfid_115.Location.X,rfid_116.Location.X};
 
-            int[] arrayRfidLoc_X = new int[] {rfid128.Location.X,rfid129.Location.X,rfid126.Location.X,rfid127.Location.X,rfid46.Location.X,rfid131.Location.X,rfid131.Location.X,rfid13.Location.X,rfid130.Location.X,
-                                              rfid125.Location.X,rfid124.Location.X,rfid123.Location.X,rfid122.Location.X,rfid121.Location.X,rfid120.Location.X,rfid2.Location.X,
-                                              rfid119.Location.X,rfid1.Location.X,rfid117.Location.X,rfid11.Location.X,rfid56.Location.X,rfid54.Location.X,rfid53.Location.X,rfid52.Location.X,rfid31.Location.X,rfid32.Location.X,
-                                              rfid33.Location.X,rfid34.Location.X,rfid15.Location.X,rfid16.Location.X,rfid37.Location.X,rfid38.Location.X,rfid39.Location.X,rfid40.Location.X,rfid41.Location.X,rfid42.Location.X,rfid43.Location.X,rfid44.Location.X,rfid8.Location.X,
-                                              rfid30.Location.X,rfid118.Location.X,rfid101.Location.X,rfid116.Location.X,rfid48.Location.X,rfid49.Location.X,rfid102.Location.X,rfid103.Location.X,
-                                              rfid104.Location.X,rfid105.Location.X,rfid106.Location.X,rfid107.Location.X,rfid108.Location.X,rfid109.Location.X,rfid110.Location.X,rfid111.Location.X,rfid112.Location.X,rfid113.Location.X,rfid114.Location.X,rfid115.Location.X,rfid8.Location.X};
-
-            int[] arrayRfidLoc_Y = new int[] {rfid128.Location.Y,rfid129.Location.Y,rfid126.Location.Y,rfid127.Location.Y,rfid46.Location.Y,rfid131.Location.Y,rfid131.Location.Y,rfid13.Location.Y,rfid130.Location.Y,
-                                              rfid125.Location.Y,rfid124.Location.Y,rfid123.Location.Y,rfid122.Location.Y,rfid121.Location.Y,rfid120.Location.Y,rfid2.Location.Y,
-                                              rfid119.Location.Y,rfid1.Location.Y,rfid117.Location.Y,rfid11.Location.Y,rfid56.Location.Y,rfid54.Location.Y,rfid53.Location.Y,rfid52.Location.Y,rfid31.Location.Y,rfid32.Location.Y,
-                                              rfid33.Location.Y,rfid34.Location.Y,rfid15.Location.Y,rfid16.Location.Y,rfid37.Location.Y,rfid38.Location.Y,rfid39.Location.Y,rfid40.Location.Y,rfid41.Location.Y,rfid42.Location.Y,rfid43.Location.Y,rfid44.Location.Y,rfid8.Location.Y,
-                                              rfid30.Location.Y,rfid118.Location.Y,rfid101.Location.Y,rfid116.Location.Y,rfid48.Location.Y,rfid49.Location.Y,rfid102.Location.Y,rfid103.Location.Y,
-                                              rfid104.Location.Y,rfid105.Location.Y,rfid106.Location.Y,rfid107.Location.Y,rfid108.Location.Y,rfid109.Location.Y,rfid110.Location.Y,rfid111.Location.Y,rfid112.Location.Y,rfid113.Location.Y,rfid114.Location.Y,rfid115.Location.Y,rfid8.Location.Y};
+            int[] arrayRfidLoc_Y = new int[] {rfid9.Location.Y,0,rfid1.Location.Y,rfid2.Location.Y,rfid4.Location.Y,rfid5.Location.Y,rfid130.Location.Y, rfid19.Location.Y,rfid20.Location.Y,rfid20.Location.Y,
+                                              rfid21.Location.Y,rfid22.Location.Y,rfid22.Location.Y,rfid22.Location.Y,rfid23.Location.Y,rfid23.Location.Y,rfid24.Location.Y,rfid24.Location.Y,rfid10.Location.Y,rfid11.Location.Y,rfid30.Location.Y,
+                                              rfid101.Location.Y,rfid102.Location.Y,rfid103.Location.Y,rfid56.Location.Y,rfid54.Location.Y,rfid53.Location.Y,rfid52.Location.Y,rfid31.Location.Y,rfid32.Location.Y,
+                                              rfid33.Location.Y,rfid34.Location.Y,rfid15.Location.Y,rfid16.Location.Y,rfid37.Location.Y,rfid38.Location.Y,rfid39.Location.Y,rfid40.Location.Y,rfid41.Location.Y,rfid42.Location.Y,
+                                              rfid_104.Location.Y,rfid_105.Location.Y,rfid_106.Location.Y,rfid_107.Location.Y,rfid_108.Location.Y,rfid_109.Location.Y,rfid_110.Location.Y,rfid_111.Location.Y,rfid_112.Location.Y,rfid_113.Location.Y,
+                                              rfid_114.Location.Y,rfid_115.Location.Y,rfid_116.Location.Y};
 
             //==================================================================== PHASE 2 ==============================================================// --> 
 
@@ -352,98 +342,17 @@ namespace SampleUI_SamsungAGV
                     agvRoute = dataRute.ToString();
                     agvRfid = dataRfid.ToString();
 
-                    if (readAddress == 1 && readType == "车")
+                    if ((readAddress == 1 || readAddress == 2) && readType == "车")
                     {
                         if (dataMovement == 0) { agvStatus = "STOP"; }
                         else if (dataMovement == 1) { agvStatus = "PAUSE"; }
                         else if (dataMovement == 2) { agvStatus = "RUN"; }
                         else { }
 
-
-                        //Image Positioning
-                        if (dataRfid == 129)
-                        {
-                            agv1Horizontal.Left = rfid129.Left;
-                            agv1Horizontal.Top = rfid129.Top;
-                            agv1Horizontal.Visible = true;
-                            agv1Vertical.Visible = false;
-                        }
-                        else if(dataRfid == 127)
-                        {
-                            agv1Horizontal.Left = rfid127.Left;
-                            agv1Horizontal.Top = rfid127.Top;
-                            agv1Horizontal.Visible = true;
-                            agv1Vertical.Visible = false;
-                        }
-                        else if(dataRfid == 131)
-                        {
-                            agv1Vertical.Top = rfid131.Top;
-                            agv1Vertical.Left = rfid131.Left;
-                            agv1Vertical.Visible = true;
-                            agv1Horizontal.Visible = false;
-                        }
-                        else if(dataRfid == 13)
-                        {
-                            agv1Vertical.Top = rfid13.Top;
-                            agv1Vertical.Left = rfid13.Left;
-                            agv1Vertical.Visible = true;
-                            agv1Horizontal.Visible = false;
-                        }
-                        else if(dataRfid == 130)
-                        {
-                            agv1Vertical.Top = rfid130.Top;
-                            agv1Vertical.Left = rfid130.Left;
-                            agv1Vertical.Visible = true;
-                            agv1Horizontal.Visible = false;
-                        }
-                        else if(dataRfid == 125)
-                        {
-                            agv1Vertical.Top = rfid125.Top;
-                            agv1Vertical.Left = rfid125.Left;
-                            agv1Vertical.Visible = true;
-                            agv1Horizontal.Visible = false;
-                        }
-                        else if (dataRfid == 124)
-                        {
-                            agv1Vertical.Top = rfid124.Top;
-                            agv1Vertical.Left = rfid124.Left;
-                            agv1Vertical.Visible = true;
-                            agv1Horizontal.Visible = false;
-                        }
-                        else if (dataRfid == 123)
-                        {
-                            agv1Vertical.Top = rfid123.Top;
-                            agv1Vertical.Left = rfid123.Left;
-                            agv1Vertical.Visible = true;
-                            agv1Horizontal.Visible = false;
-                        }
-                        else if (dataRfid == 122)
-                        {
-                            agv1Vertical.Top = rfid122.Top;
-                            agv1Vertical.Left = rfid122.Left;
-                            agv1Vertical.Visible = true;
-                            agv1Horizontal.Visible = false;
-                        }
-                        else if (dataRfid == 121)
-                        {
-                            agv1Vertical.Top = rfid121.Top;
-                            agv1Vertical.Left = rfid121.Left;
-                            agv1Vertical.Visible = true;
-                            agv1Horizontal.Visible = false;
-                        }
-                        else if (dataRfid == 120)
-                        {
-                            agv1Vertical.Top = rfid120.Top;
-                            agv1Vertical.Left = rfid120.Left;
-                            agv1Vertical.Visible = true;
-                            agv1Horizontal.Visible = false;
-                        }
-                        //Image Positioning ends here
-
-                        if (dataRute == 1 || dataRute == 3 || dataRute == 4 || dataRute == 5 || dataRute == 6 || dataRute ==7)
+                        if (dataRute == 1 || dataRute == 2 || dataRute == 3 || dataRute == 4 || dataRute == 5)
                         {
                             agvRoute = "GO TO LINE";
-                            if (dataRfid == 13) { labelPosition.Text = agvRoute; }
+                            if (dataRfid == 11) { labelPosition.Text = agvRoute; }
                             else { labelPosition.Text = arrayPosition[indexRFID]; }
                         }
                         // Button Route 1
@@ -458,25 +367,25 @@ namespace SampleUI_SamsungAGV
                             labelPosition.Text = agvRoute;
                         }
                         // Transfer WIP FUll 1
-                        else if ((dataRute == 20) && (dataRfid == 130 || dataRfid == 13))
+                        else if (dataRute == 20 && dataRfid == 10)
                         {
                             wipFull1.Visible = true;
-
                         }
                         else if (dataRute == 20 || dataRute == 30)
                         {
                             //agvRoute = "GO HOME";
-                            if ((dataRfid == 128 || dataRfid == 129 || labelPosition.Text == "HOME") && statusDelivery == "FINISH")
+                            if ((dataRfid == 5 || labelPosition.Text == "HOME") && statusDelivery == "FINISH")
                             {
                                 activeLine(false, false, false, false, false, false);
                                 labelPosition.Text = arrayPosition[indexRFID];
-                                agv2Horizontal.Top = rfid129.Location.X;
-                                agv1Horizontal.Top = rfid129.Location.X;
-
+                                agvHome1.Visible = true;
+                                //agvLabel1.Visible = true;
+                                agvIcon.Visible = false; agvFlip1.Visible = false; agvFlip2.Visible = false;
+                                //Console.WriteLine("Home");
                             }
                             else if (dataRfid == 9)
                             {
-                                agv1Vertical.Visible = false;
+                                agvIcon.Visible = false;
                             }
                             wipFull1.Visible = false;
                             wipFull2.Visible = false;
@@ -485,131 +394,128 @@ namespace SampleUI_SamsungAGV
                         {
                             agvRoute = "STANDBY";
                             labelPosition.Text = arrayPosition[indexRFID];
-                            agv2Horizontal.Top = rfid129.Location.X;
-                            agv1Horizontal.Top = rfid129.Location.X;
+                            agvHome1.Visible = true;
                             //agvLabel1.Visible = false;
-                            agv1Vertical.Visible = false;
+                            agvIcon.Visible = false;
                         }
 
                         // Visualization
                         if (dataRfid == 1 && dataRute != 20)
                         {
-                            //agvFlip1.Visible = true;
-                            //agvFlip2.Visible = false;
-                            agv1Vertical.Visible = false;
-                            //agvFlip1.Left = arrayRfidLoc_X[indexRFID];
-                            //agvFlip1.Top = arrayRfidLoc_Y[indexRFID];
+                            agvFlip1.Visible = true;
+                            agvFlip2.Visible = false;
+                            agvIcon.Visible = false;
+                            agvFlip1.Left = arrayRfidLoc_X[indexRFID];
+                            agvFlip1.Top = arrayRfidLoc_Y[indexRFID];
                         }
                         else if (dataRfid == 11 && dataRute != 20)
                         {
-                            agv1Vertical.Visible = false;
+                            agvIcon.Visible = false;
                         }
                         else if ((dataRfid == 31 || dataRfid ==52 || dataRfid == 53 || dataRfid == 54 || dataRfid == 56) && dataRute != 20)
                         {
-                            //agvFlip1.Visible = false;
-                            //agvFlip2.Visible = true;
-                            agv1Vertical.Visible = false;
-                            //agvFlip2.Left = arrayRfidLoc_X[indexRFID];
-                            //agvFlip2.Top = arrayRfidLoc_Y[indexRFID];
+                            agvFlip1.Visible = false;
+                            agvFlip2.Visible = true;
+                            agvIcon.Visible = false;
+                            agvFlip2.Left = arrayRfidLoc_X[indexRFID];
+                            agvFlip2.Top = arrayRfidLoc_Y[indexRFID];
                         }
                         else if (dataRfid == 32 && dataRute != 20)
                         {
-                            //agvFlip2.Visible = false;
-                            agv1Vertical.Visible = true;
-                            agv1Vertical.Left = arrayRfidLoc_X[indexRFID];
-                            agv1Vertical.Top = arrayRfidLoc_Y[indexRFID];
+                            agvFlip2.Visible = false;
+                            agvIcon.Visible = true;
+                            agvIcon.Left = arrayRfidLoc_X[indexRFID];
+                            agvIcon.Top = arrayRfidLoc_Y[indexRFID];
                         }
                         else if (dataRfid == 32)
                         {
-                            agv1Vertical.Visible = true;
-                            agv1Vertical.Left = arrayRfidLoc_X[indexRFID];
-                            agv1Vertical.Top = arrayRfidLoc_Y[indexRFID];
+                            agvIcon.Visible = true;
+                            agvIcon.Left = arrayRfidLoc_X[indexRFID];
+                            agvIcon.Top = arrayRfidLoc_Y[indexRFID];
                         }
                         else if (dataRfid == 31 && dataRute == 20)
                         {
                             moveAnimation.Start();
                             Console.WriteLine("`");
-                            agv1Vertical.Visible = false;
-                            //agvFlip2.Visible = false;
-                            //agvFlip3.Visible = false;
-                            //agvFlip4.Visible = true;
+                            agvIcon.Visible = false;
+                            agvFlip2.Visible = false;
+                            agvFlip3.Visible = false;
+                            agvFlip4.Visible = true;
                             int position = rfidVirtual1.Location.X + moveCnt;
-                            //agvFlip4.Left = position;
-                            //agvFlip4.Top = rfidVirtual1.Location.Y;
+                            agvFlip4.Left = position;
+                            agvFlip4.Top = rfidVirtual1.Location.Y;
                             Console.WriteLine("moveCnt : {0}, agvPost : {1} X : {2} ", moveCnt, position, rfidVirtual2.Location.X);
-                            if (dataRfid == 11)
+                            if (agvFlip4.Location.X > rfidVirtual2.Left || dataRfid == 11)
                             {
                                 moveAnimation.Stop();
                                 Console.WriteLine("wess");
-                                //agvFlip4.Visible = false;
-                                //agvFlip3.Visible = true;
-                                //agvFlip3.Left = rfidVirtual2.Location.X;
-                                //agvFlip3.Top = rfidVirtual2.Location.Y;
+                                agvFlip4.Visible = false;
+                                agvFlip3.Visible = true;
+                                agvFlip3.Left = rfidVirtual2.Location.X;
+                                agvFlip3.Top = rfidVirtual2.Location.Y;
                             }
-                            else 
-                            { 
-                                //agvFlip4.Visible = true; agvFlip3.Visible = false;
-                            }
+                            else { agvFlip4.Visible = true; agvFlip3.Visible = false; }
                         }
                         else if (dataRfid == 11 && dataRute == 20)
                         {
-                            //agvFlip4.Visible = false;
-                            //agvFlip2.Visible = false;
-                            //agvFlip3.Visible = true;
-                            agv1Vertical.Visible = false;
-                            //agvFlip3.Left = arrayRfidLoc_X[indexRFID];
-                            //agvFlip3.Top = arrayRfidLoc_Y[indexRFID];
+                            agvFlip4.Visible = false;
+                            agvFlip2.Visible = false;
+                            agvFlip3.Visible = true;
+                            agvIcon.Visible = false;
+                            agvFlip3.Left = arrayRfidLoc_X[indexRFID];
+                            agvFlip3.Top = arrayRfidLoc_Y[indexRFID];
                         }
                         else if (dataRfid == 1 && dataRute == 20)
                         {
-                            //agvFlip1.Visible = true;
-                            //agvFlip2.Visible = false;
-                            //agvFlip3.Visible = false;
-                            agv1Vertical.Visible = false;
-                            //agvFlip1.Left = arrayRfidLoc_X[indexRFID];
-                            //agvFlip1.Top = arrayRfidLoc_Y[indexRFID];
+                            agvFlip1.Visible = true;
+                            agvFlip2.Visible = false;
+                            agvFlip3.Visible = false;
+                            agvIcon.Visible = false;
+                            agvFlip1.Left = arrayRfidLoc_X[indexRFID];
+                            agvFlip1.Top = arrayRfidLoc_Y[indexRFID];
                         }
                         else if (dataRfid == 2 && dataRute == 20)
                         {
-                            //agvFlip1.Visible = false;
-                            //agvFlip2.Visible = false;
-                            //agvFlip3.Visible = false;
-                            //agvFlip4.Visible = false;
-                            agv1Vertical.Visible = true;
-                            agv1Vertical.Left = arrayRfidLoc_X[indexRFID];
-                            agv1Vertical.Top = arrayRfidLoc_Y[indexRFID];
+                            agvFlip1.Visible = false;
+                            agvFlip2.Visible = false;
+                            agvFlip3.Visible = false;
+                            agvFlip4.Visible = false;
+                            agvIcon.Visible = true;
+                            agvIcon.Left = arrayRfidLoc_X[indexRFID];
+                            agvIcon.Top = arrayRfidLoc_Y[indexRFID];
                         }
                         else if (dataRfid == 5)
                         {
+                            agvHome1.Visible = true;
                             //agvLabel1.Visible = true;
                         }
                         else if (dataRute == 1)
                         {
                             Console.WriteLine("Bypass Rute 1");
                             labelPosition.Text = arrayPosition[indexRFID];
-                            agv1Vertical.Visible = true;
-                            //agvFlip3.Visible = false;
-                            //agvFlip4.Visible = false;
-                            //agvHome1.Visible = false;
+                            agvIcon.Visible = true;
+                            agvFlip3.Visible = false;
+                            agvFlip4.Visible = false;
+                            agvHome1.Visible = false;
                             //agvLabel1.Visible = false;
-                            agv1Vertical.Left = arrayRfidLoc_X[indexRFID];
-                            agv1Vertical.Top = arrayRfidLoc_Y[indexRFID];
+                            agvIcon.Left = arrayRfidLoc_X[indexRFID];
+                            agvIcon.Top = arrayRfidLoc_Y[indexRFID];
 
                         }
                         else if (dataRfid == 0)
                         {
                             Console.WriteLine("RFID = 0");
-                            agv1Vertical.Visible = false;
-                            //agvHome1.Visible = false;
+                            agvIcon.Visible = false;
+                            agvHome1.Visible = false;
                             //agvLabel1.Visible = false;
                         }
                         else
                         {
                             //Console.WriteLine("arrayPos : {0}", arrayPosition[indexRFID]);
                             //labelPosition.Text = arrayPosition[indexRFID];
-                            agv1Vertical.Visible = true;
-                            agv1Vertical.Left = arrayRfidLoc_X[indexRFID];
-                            agv1Vertical.Top = arrayRfidLoc_Y[indexRFID];
+                            agvIcon.Visible = true;
+                            agvIcon.Left = arrayRfidLoc_X[indexRFID];
+                            agvIcon.Top = arrayRfidLoc_Y[indexRFID];
                         }
                         AGVStatusModel temp = new AGVStatusModel(agvName, agvState, agvStatus.ToString());
                         //AGVStatusModel temp2 = new AGVStatusModel(agv2Name, agvState, agvStatus.ToString());
@@ -618,11 +524,6 @@ namespace SampleUI_SamsungAGV
                         //showData.Add(temp2);
                         Console.WriteLine("agvState : {0}",agvState);
                     }
-                    else if(readAddress == 2 && readType == "车")
-                    {
-                        
-                    }
-
                     
                 }
                 gridViewStatus.Invoke((MethodInvoker)delegate { gridViewStatus.DataSource = showData; });
