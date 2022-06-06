@@ -1,0 +1,91 @@
+﻿<?xml version="1.0"?>
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+
+  <!-- If runtime tag is absent -->
+  <runtime xdt:Transform="InsertIfMissing">
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+    </assemblyBinding>
+  </runtime>
+
+  <!-- If runtime tag is present, but assembly binding tag is absent -->
+  <runtime>
+    <assemblyBinding xdt:Transform="InsertIfMissing" xmlns="urn:schemas-microsoft-com:asm.v1">
+    </assemblyBinding>
+  </runtime>
+<!-- If the binding redirect is already present, the existing entry needs to be removed before inserting the new entry-->
+  <runtime>
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+      <dependentAssembly xdt:Transform="Remove"
+          xdt:Locator="Condition(./_defaultNamespace:assemblyIdentity/@name='Aspose.Words')" >
+      </dependentAssembly>
+      <dependentAssembly xdt:Transform="Remove"
+          xdt:Locator="Condition(./_defaultNamespace:assemblyIdentity/@name='Aspose.Cells')" >
+      </dependentAssembly>
+      <dependentAssembly xdt:Transform="Remove"
+          xdt:Locator="Condition(./_defaultNamespace:assemblyIdentity/@name='Aspose.PDF')" >
+      </dependentAssembly>
+      <dependentAssembly xdt:Transform="Remove"
+          xdt:Locator="Condition(./_defaultNamespace:assemblyIdentity/@name='Aspose.Email')" >
+      </dependentAssembly>
+      <dependentAssembly xdt:Transform="Remove"
+          xdt:Locator="Condition(./_defaultNamespace:assemblyIdentity/@name='Aspose.Slides')" >
+      </dependentAssembly>
+      <dependentAssembly xdt:Transform="Remove"
+          xdt:Locator="Condition(./_defaultNamespace:assemblyIdentity/@name='Aspose.Imaging')" >
+      </dependentAssembly>
+      <dependentAssembly xdt:Transform="Remove"
+          xdt:Locator="Condition(./_defaultNamespace:assemblyIdentity/@name='Aspose.Note')" >
+      </dependentAssembly>
+      <dependentAssembly xdt:Transform="Remove"
+          xdt:Locator="Condition(./_defaultNamespace:assemblyIdentity/@name='Aspose.Zip')" >
+      </dependentAssembly>      
+    </assemblyBinding>
+  </runtime>
+
+  <!-- Inserting the new binding redirect -->
+  <runtime>
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+      <dependentAssembly xdt:Transform="Insert">
+        <assemblyIdentity name="Aspose.Words" publicKeyToken="716fcc553a201e56" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-21.2.0.0" newVersion="21.2.0.0" />
+		    <publisherPolicy apply="no" />
+      </dependentAssembly>
+      <dependentAssembly xdt:Transform="Insert">
+        <assemblyIdentity name="Aspose.Cells" publicKeyToken="716fcc553a201e56" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-21.2.0.0" newVersion="21.2.0.0" />
+		    <publisherPolicy apply="no" />
+      </dependentAssembly>
+      <dependentAssembly xdt:Transform="Insert">
+        <assemblyIdentity name="Aspose.PDF" publicKeyToken="716fcc553a201e56" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-21.2.0.0" newVersion="21.2.0.0" />
+		    <publisherPolicy apply="no" />
+      </dependentAssembly>
+      <dependentAssembly xdt:Transform="Insert">
+        <assemblyIdentity name="Aspose.Email" publicKeyToken="716fcc553a201e56" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-21.1.1.0" newVersion="21.1.1.0" />
+		    <publisherPolicy apply="no" />
+      </dependentAssembly>
+      <dependentAssembly xdt:Transform="Insert">
+        <assemblyIdentity name="Aspose.Slides" publicKeyToken="716fcc553a201e56" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-21.2.0.0" newVersion="21.2.0.0" />
+		    <publisherPolicy apply="no" />
+      </dependentAssembly>
+      <dependentAssembly xdt:Transform="Insert">
+        <assemblyIdentity name="Aspose.Imaging" publicKeyToken="716fcc553a201e56" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-21.2.0.0" newVersion="21.2.0.0" />
+		    <publisherPolicy apply="no" />
+      </dependentAssembly>
+      <dependentAssembly xdt:Transform="Insert">
+        <assemblyIdentity name="Aspose.Note" publicKeyToken="716fcc553a201e56" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-21.1.0.0" newVersion="21.1.0.0" />
+		    <publisherPolicy apply="no" />
+      </dependentAssembly>
+      <dependentAssembly xdt:Transform="Insert">
+        <assemblyIdentity name="Aspose.Zip" publicKeyToken="716fcc553a201e56" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-21.1.0.0" newVersion="21.1.0.0" />
+		    <publisherPolicy apply="no" />
+      </dependentAssembly>      
+    </assemblyBinding>
+  </runtime>
+</configuration>
+
