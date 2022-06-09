@@ -1,4 +1,4 @@
-﻿
+
 namespace SampleUI_SamsungAGV
 {
     partial class Form1
@@ -32,16 +32,16 @@ namespace SampleUI_SamsungAGV
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.dateNtime = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
@@ -72,15 +72,19 @@ namespace SampleUI_SamsungAGV
             this.Battery = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.rfid124 = new System.Windows.Forms.TextBox();
+            this.rfid13 = new System.Windows.Forms.TextBox();
+            this.rfid131 = new System.Windows.Forms.TextBox();
+            this.agv1Horizontal = new System.Windows.Forms.PictureBox();
             this.agv1Vertical = new System.Windows.Forms.PictureBox();
             this.agv2Horizontal = new System.Windows.Forms.PictureBox();
-            this.agv1Horizontal = new System.Windows.Forms.PictureBox();
             this.rfid49 = new System.Windows.Forms.TextBox();
             this.rfid48 = new System.Windows.Forms.TextBox();
             this.textBox14 = new System.Windows.Forms.TextBox();
             this.wipIn6 = new System.Windows.Forms.TextBox();
             this.wipOut2 = new System.Windows.Forms.TextBox();
             this.wipOut1 = new System.Windows.Forms.TextBox();
+            this.rfid130 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.wipIn5 = new System.Windows.Forms.TextBox();
             this.agv2Vertical = new System.Windows.Forms.PictureBox();
@@ -101,9 +105,9 @@ namespace SampleUI_SamsungAGV
             this.pictureBox18 = new System.Windows.Forms.PictureBox();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.rfid11 = new System.Windows.Forms.TextBox();
+            this.rfid125 = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.rfid54 = new System.Windows.Forms.TextBox();
-            this.rfidVirtual2 = new System.Windows.Forms.TextBox();
             this.rfid117 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.rfid103 = new System.Windows.Forms.TextBox();
@@ -125,7 +129,6 @@ namespace SampleUI_SamsungAGV
             this.rfid109 = new System.Windows.Forms.TextBox();
             this.rfid107 = new System.Windows.Forms.TextBox();
             this.rfid105 = new System.Windows.Forms.TextBox();
-            this.rfidVirtual1 = new System.Windows.Forms.TextBox();
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.rfid116 = new System.Windows.Forms.TextBox();
             this.rfid123 = new System.Windows.Forms.TextBox();
@@ -193,9 +196,7 @@ namespace SampleUI_SamsungAGV
             this.send1 = new System.Windows.Forms.PictureBox();
             this.goLine1 = new System.Windows.Forms.PictureBox();
             this.idleSmd1 = new System.Windows.Forms.PictureBox();
-            this.standbyWip = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.rfid13 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
@@ -206,7 +207,6 @@ namespace SampleUI_SamsungAGV
             this.wip10 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.wip11 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.wip12 = new Bunifu.UI.WinForms.BunifuPictureBox();
-            this.rfid130 = new System.Windows.Forms.TextBox();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.textBox12 = new System.Windows.Forms.TextBox();
@@ -230,9 +230,6 @@ namespace SampleUI_SamsungAGV
             this.wip6 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.pictureBox25 = new System.Windows.Forms.PictureBox();
-            this.rfid131 = new System.Windows.Forms.TextBox();
-            this.rfid124 = new System.Windows.Forms.TextBox();
-            this.rfid125 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
@@ -242,7 +239,6 @@ namespace SampleUI_SamsungAGV
             this.standby4 = new System.Windows.Forms.PictureBox();
             this.send4 = new System.Windows.Forms.PictureBox();
             this.stopLine1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.bunifuPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
@@ -252,9 +248,9 @@ namespace SampleUI_SamsungAGV
             ((System.ComponentModel.ISupportInitialize)(this.gridViewStatus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.bunifuPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.agv1Horizontal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agv1Vertical)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agv2Horizontal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.agv1Horizontal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agv2Vertical)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
@@ -292,7 +288,6 @@ namespace SampleUI_SamsungAGV
             ((System.ComponentModel.ISupportInitialize)(this.send1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goLine1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.idleSmd1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.standbyWip)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wip7)).BeginInit();
@@ -320,7 +315,6 @@ namespace SampleUI_SamsungAGV
             ((System.ComponentModel.ISupportInitialize)(this.standby4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.send4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stopLine1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -512,7 +506,6 @@ namespace SampleUI_SamsungAGV
             this.batteryLevel2.TabIndex = 215;
             this.batteryLevel2.Value = 0;
             this.batteryLevel2.ValueByTransition = 0;
-            this.batteryLevel2.Visible = false;
             this.batteryLevel2.ProgressChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuProgressBar.ProgressChangedEventArgs>(this.batteryLevel2_ProgressChanged);
             // 
             // pictureBox19
@@ -537,7 +530,6 @@ namespace SampleUI_SamsungAGV
             this.batValue2.TabIndex = 211;
             this.batValue2.Text = "0";
             this.batValue2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.batValue2.Visible = false;
             // 
             // label8
             // 
@@ -550,7 +542,6 @@ namespace SampleUI_SamsungAGV
             this.label8.TabIndex = 212;
             this.label8.Text = "%";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label8.Visible = false;
             // 
             // labelDisconnect
             // 
@@ -638,22 +629,22 @@ namespace SampleUI_SamsungAGV
             this.gridViewError.AllowCustomTheming = false;
             this.gridViewError.AllowUserToAddRows = false;
             this.gridViewError.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(196)))), ((int)(((byte)(206)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.gridViewError.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(196)))), ((int)(((byte)(206)))));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            this.gridViewError.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             this.gridViewError.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridViewError.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.gridViewError.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.gridViewError.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.gridViewError.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Crimson;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(16)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridViewError.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.Crimson;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(16)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridViewError.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.gridViewError.ColumnHeadersHeight = 40;
             this.gridViewError.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(196)))), ((int)(((byte)(206)))));
             this.gridViewError.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
@@ -674,14 +665,14 @@ namespace SampleUI_SamsungAGV
             this.gridViewError.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(114)))), ((int)(((byte)(138)))));
             this.gridViewError.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
             this.gridViewError.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(208)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(114)))), ((int)(((byte)(138)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridViewError.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(208)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(114)))), ((int)(((byte)(138)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridViewError.DefaultCellStyle = dataGridViewCellStyle13;
             this.gridViewError.EnableHeadersVisualStyles = false;
             this.gridViewError.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(184)))), ((int)(((byte)(196)))));
             this.gridViewError.HeaderBackColor = System.Drawing.Color.Crimson;
@@ -761,22 +752,22 @@ namespace SampleUI_SamsungAGV
             this.gridViewDS.AllowCustomTheming = false;
             this.gridViewDS.AllowUserToAddRows = false;
             this.gridViewDS.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(242)))), ((int)(((byte)(203)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.gridViewDS.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(242)))), ((int)(((byte)(203)))));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
+            this.gridViewDS.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle14;
             this.gridViewDS.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridViewDS.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.gridViewDS.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.gridViewDS.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.gridViewDS.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.LimeGreen;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(164)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridViewDS.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.LimeGreen;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(164)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridViewDS.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.gridViewDS.ColumnHeadersHeight = 40;
             this.gridViewDS.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(242)))), ((int)(((byte)(203)))));
             this.gridViewDS.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
@@ -797,14 +788,14 @@ namespace SampleUI_SamsungAGV
             this.gridViewDS.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(225)))), ((int)(((byte)(132)))));
             this.gridViewDS.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.gridViewDS.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(245)))), ((int)(((byte)(214)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(225)))), ((int)(((byte)(132)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridViewDS.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(245)))), ((int)(((byte)(214)))));
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(225)))), ((int)(((byte)(132)))));
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridViewDS.DefaultCellStyle = dataGridViewCellStyle16;
             this.gridViewDS.EnableHeadersVisualStyles = false;
             this.gridViewDS.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(240)))), ((int)(((byte)(193)))));
             this.gridViewDS.HeaderBackColor = System.Drawing.Color.LimeGreen;
@@ -814,14 +805,14 @@ namespace SampleUI_SamsungAGV
             this.gridViewDS.Margin = new System.Windows.Forms.Padding(2);
             this.gridViewDS.Name = "gridViewDS";
             this.gridViewDS.ReadOnly = true;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridViewDS.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridViewDS.RowHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.gridViewDS.RowHeadersVisible = false;
             this.gridViewDS.RowHeadersWidth = 362;
             this.gridViewDS.RowTemplate.Height = 40;
@@ -835,10 +826,10 @@ namespace SampleUI_SamsungAGV
             this.gridViewStatus.AllowCustomTheming = false;
             this.gridViewStatus.AllowUserToAddRows = false;
             this.gridViewStatus.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            this.gridViewStatus.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
+            this.gridViewStatus.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle18;
             this.gridViewStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -847,14 +838,14 @@ namespace SampleUI_SamsungAGV
             this.gridViewStatus.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.gridViewStatus.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.gridViewStatus.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridViewStatus.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridViewStatus.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
             this.gridViewStatus.ColumnHeadersHeight = 40;
             this.gridViewStatus.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Battery});
@@ -877,14 +868,14 @@ namespace SampleUI_SamsungAGV
             this.gridViewStatus.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.gridViewStatus.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.gridViewStatus.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridViewStatus.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridViewStatus.DefaultCellStyle = dataGridViewCellStyle20;
             this.gridViewStatus.EnableHeadersVisualStyles = false;
             this.gridViewStatus.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.gridViewStatus.HeaderBackColor = System.Drawing.Color.DodgerBlue;
@@ -933,15 +924,19 @@ namespace SampleUI_SamsungAGV
             this.bunifuPanel2.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel2.BorderRadius = 10;
             this.bunifuPanel2.BorderThickness = 0;
+            this.bunifuPanel2.Controls.Add(this.rfid124);
+            this.bunifuPanel2.Controls.Add(this.rfid13);
+            this.bunifuPanel2.Controls.Add(this.rfid131);
+            this.bunifuPanel2.Controls.Add(this.agv1Horizontal);
             this.bunifuPanel2.Controls.Add(this.agv1Vertical);
             this.bunifuPanel2.Controls.Add(this.agv2Horizontal);
-            this.bunifuPanel2.Controls.Add(this.agv1Horizontal);
             this.bunifuPanel2.Controls.Add(this.rfid49);
             this.bunifuPanel2.Controls.Add(this.rfid48);
             this.bunifuPanel2.Controls.Add(this.textBox14);
             this.bunifuPanel2.Controls.Add(this.wipIn6);
             this.bunifuPanel2.Controls.Add(this.wipOut2);
             this.bunifuPanel2.Controls.Add(this.wipOut1);
+            this.bunifuPanel2.Controls.Add(this.rfid130);
             this.bunifuPanel2.Controls.Add(this.label7);
             this.bunifuPanel2.Controls.Add(this.wipIn5);
             this.bunifuPanel2.Controls.Add(this.agv2Vertical);
@@ -962,9 +957,9 @@ namespace SampleUI_SamsungAGV
             this.bunifuPanel2.Controls.Add(this.pictureBox18);
             this.bunifuPanel2.Controls.Add(this.pictureBox15);
             this.bunifuPanel2.Controls.Add(this.rfid11);
+            this.bunifuPanel2.Controls.Add(this.rfid125);
             this.bunifuPanel2.Controls.Add(this.pictureBox2);
             this.bunifuPanel2.Controls.Add(this.rfid54);
-            this.bunifuPanel2.Controls.Add(this.rfidVirtual2);
             this.bunifuPanel2.Controls.Add(this.rfid117);
             this.bunifuPanel2.Controls.Add(this.label9);
             this.bunifuPanel2.Controls.Add(this.rfid103);
@@ -986,7 +981,6 @@ namespace SampleUI_SamsungAGV
             this.bunifuPanel2.Controls.Add(this.rfid109);
             this.bunifuPanel2.Controls.Add(this.rfid107);
             this.bunifuPanel2.Controls.Add(this.rfid105);
-            this.bunifuPanel2.Controls.Add(this.rfidVirtual1);
             this.bunifuPanel2.Controls.Add(this.textBox16);
             this.bunifuPanel2.Controls.Add(this.rfid116);
             this.bunifuPanel2.Controls.Add(this.rfid123);
@@ -1054,7 +1048,6 @@ namespace SampleUI_SamsungAGV
             this.bunifuPanel2.Controls.Add(this.send1);
             this.bunifuPanel2.Controls.Add(this.goLine1);
             this.bunifuPanel2.Controls.Add(this.idleSmd1);
-            this.bunifuPanel2.Controls.Add(this.standbyWip);
             this.bunifuPanel2.Controls.Add(this.panel1);
             this.bunifuPanel2.Controls.Add(this.pictureBox1);
             this.bunifuPanel2.Controls.Add(this.pictureBox11);
@@ -1065,7 +1058,6 @@ namespace SampleUI_SamsungAGV
             this.bunifuPanel2.Controls.Add(this.standby4);
             this.bunifuPanel2.Controls.Add(this.send4);
             this.bunifuPanel2.Controls.Add(this.stopLine1);
-            this.bunifuPanel2.Controls.Add(this.pictureBox3);
             this.bunifuPanel2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bunifuPanel2.Location = new System.Drawing.Point(16, 20);
             this.bunifuPanel2.Margin = new System.Windows.Forms.Padding(2);
@@ -1074,13 +1066,52 @@ namespace SampleUI_SamsungAGV
             this.bunifuPanel2.Size = new System.Drawing.Size(1513, 980);
             this.bunifuPanel2.TabIndex = 5;
             // 
+            // rfid124
+            // 
+            this.rfid124.Location = new System.Drawing.Point(1058, 734);
+            this.rfid124.Name = "rfid124";
+            this.rfid124.Size = new System.Drawing.Size(35, 20);
+            this.rfid124.TabIndex = 288;
+            this.rfid124.Text = "R124";
+            this.rfid124.Visible = false;
+            // 
+            // rfid13
+            // 
+            this.rfid13.Location = new System.Drawing.Point(1058, 838);
+            this.rfid13.Name = "rfid13";
+            this.rfid13.Size = new System.Drawing.Size(35, 20);
+            this.rfid13.TabIndex = 294;
+            this.rfid13.Text = "R13";
+            this.rfid13.Visible = false;
+            // 
+            // rfid131
+            // 
+            this.rfid131.Location = new System.Drawing.Point(1058, 859);
+            this.rfid131.Name = "rfid131";
+            this.rfid131.Size = new System.Drawing.Size(35, 20);
+            this.rfid131.TabIndex = 293;
+            this.rfid131.Text = "R131";
+            this.rfid131.Visible = false;
+            // 
+            // agv1Horizontal
+            // 
+            this.agv1Horizontal.BackColor = System.Drawing.Color.Transparent;
+            this.agv1Horizontal.Image = ((System.Drawing.Image)(resources.GetObject("agv1Horizontal.Image")));
+            this.agv1Horizontal.Location = new System.Drawing.Point(1228, 714);
+            this.agv1Horizontal.Name = "agv1Horizontal";
+            this.agv1Horizontal.Size = new System.Drawing.Size(50, 38);
+            this.agv1Horizontal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.agv1Horizontal.TabIndex = 292;
+            this.agv1Horizontal.TabStop = false;
+            this.agv1Horizontal.Visible = false;
+            // 
             // agv1Vertical
             // 
             this.agv1Vertical.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.agv1Vertical.BackColor = System.Drawing.Color.Transparent;
             this.agv1Vertical.Image = ((System.Drawing.Image)(resources.GetObject("agv1Vertical.Image")));
-            this.agv1Vertical.Location = new System.Drawing.Point(709, 461);
+            this.agv1Vertical.Location = new System.Drawing.Point(1326, 834);
             this.agv1Vertical.Margin = new System.Windows.Forms.Padding(1);
             this.agv1Vertical.Name = "agv1Vertical";
             this.agv1Vertical.Size = new System.Drawing.Size(38, 50);
@@ -1093,25 +1124,13 @@ namespace SampleUI_SamsungAGV
             // 
             this.agv2Horizontal.BackColor = System.Drawing.Color.Transparent;
             this.agv2Horizontal.Image = ((System.Drawing.Image)(resources.GetObject("agv2Horizontal.Image")));
-            this.agv2Horizontal.Location = new System.Drawing.Point(1038, 614);
+            this.agv2Horizontal.Location = new System.Drawing.Point(1315, 705);
             this.agv2Horizontal.Name = "agv2Horizontal";
             this.agv2Horizontal.Size = new System.Drawing.Size(50, 38);
             this.agv2Horizontal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.agv2Horizontal.TabIndex = 286;
             this.agv2Horizontal.TabStop = false;
-            // 
-            // agv1Horizontal
-            // 
-            this.agv1Horizontal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.agv1Horizontal.BackColor = System.Drawing.Color.Transparent;
-            this.agv1Horizontal.Image = ((System.Drawing.Image)(resources.GetObject("agv1Horizontal.Image")));
-            this.agv1Horizontal.Location = new System.Drawing.Point(924, 615);
-            this.agv1Horizontal.Name = "agv1Horizontal";
-            this.agv1Horizontal.Size = new System.Drawing.Size(50, 38);
-            this.agv1Horizontal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.agv1Horizontal.TabIndex = 285;
-            this.agv1Horizontal.TabStop = false;
+            this.agv2Horizontal.Visible = false;
             // 
             // rfid49
             // 
@@ -1121,6 +1140,7 @@ namespace SampleUI_SamsungAGV
             this.rfid49.TabIndex = 284;
             this.rfid49.Text = "R49";
             this.rfid49.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.rfid49.Visible = false;
             // 
             // rfid48
             // 
@@ -1130,6 +1150,7 @@ namespace SampleUI_SamsungAGV
             this.rfid48.TabIndex = 283;
             this.rfid48.Text = "R48";
             this.rfid48.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.rfid48.Visible = false;
             // 
             // textBox14
             // 
@@ -1183,6 +1204,15 @@ namespace SampleUI_SamsungAGV
             this.wipOut1.Text = "OUT 1";
             this.wipOut1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // rfid130
+            // 
+            this.rfid130.Location = new System.Drawing.Point(1058, 817);
+            this.rfid130.Name = "rfid130";
+            this.rfid130.Size = new System.Drawing.Size(35, 20);
+            this.rfid130.TabIndex = 241;
+            this.rfid130.Text = "R130";
+            this.rfid130.Visible = false;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -1211,12 +1241,13 @@ namespace SampleUI_SamsungAGV
             // 
             this.agv2Vertical.BackColor = System.Drawing.Color.Transparent;
             this.agv2Vertical.Image = ((System.Drawing.Image)(resources.GetObject("agv2Vertical.Image")));
-            this.agv2Vertical.Location = new System.Drawing.Point(1452, 597);
+            this.agv2Vertical.Location = new System.Drawing.Point(1377, 834);
             this.agv2Vertical.Name = "agv2Vertical";
             this.agv2Vertical.Size = new System.Drawing.Size(38, 50);
             this.agv2Vertical.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.agv2Vertical.TabIndex = 272;
             this.agv2Vertical.TabStop = false;
+            this.agv2Vertical.Visible = false;
             // 
             // wipIn4
             // 
@@ -1328,16 +1359,17 @@ namespace SampleUI_SamsungAGV
             // 
             // rfid126
             // 
-            this.rfid126.Location = new System.Drawing.Point(1111, 933);
+            this.rfid126.Location = new System.Drawing.Point(1110, 925);
             this.rfid126.Name = "rfid126";
             this.rfid126.Size = new System.Drawing.Size(35, 20);
             this.rfid126.TabIndex = 266;
             this.rfid126.Text = "R126";
+            this.rfid126.Visible = false;
             // 
             // rfid128
             // 
             this.rfid128.BackColor = System.Drawing.Color.White;
-            this.rfid128.Location = new System.Drawing.Point(1176, 933);
+            this.rfid128.Location = new System.Drawing.Point(1160, 925);
             this.rfid128.Name = "rfid128";
             this.rfid128.Size = new System.Drawing.Size(35, 20);
             this.rfid128.TabIndex = 265;
@@ -1362,6 +1394,7 @@ namespace SampleUI_SamsungAGV
             this.rfid127.Size = new System.Drawing.Size(35, 20);
             this.rfid127.TabIndex = 263;
             this.rfid127.Text = "R127";
+            this.rfid127.Visible = false;
             // 
             // pictureBox18
             // 
@@ -1392,11 +1425,20 @@ namespace SampleUI_SamsungAGV
             this.rfid11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.rfid11.Visible = false;
             // 
+            // rfid125
+            // 
+            this.rfid125.Location = new System.Drawing.Point(1058, 757);
+            this.rfid125.Name = "rfid125";
+            this.rfid125.Size = new System.Drawing.Size(35, 20);
+            this.rfid125.TabIndex = 161;
+            this.rfid125.Text = "R125";
+            this.rfid125.Visible = false;
+            // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1103, 650);
+            this.pictureBox2.Location = new System.Drawing.Point(1103, 648);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(115, 315);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1411,15 +1453,6 @@ namespace SampleUI_SamsungAGV
             this.rfid54.TabIndex = 249;
             this.rfid54.Text = "R54";
             this.rfid54.Visible = false;
-            // 
-            // rfidVirtual2
-            // 
-            this.rfidVirtual2.Location = new System.Drawing.Point(1467, 754);
-            this.rfidVirtual2.Name = "rfidVirtual2";
-            this.rfidVirtual2.Size = new System.Drawing.Size(35, 20);
-            this.rfidVirtual2.TabIndex = 210;
-            this.rfidVirtual2.Text = "RV2";
-            this.rfidVirtual2.Visible = false;
             // 
             // rfid117
             // 
@@ -1628,15 +1661,6 @@ namespace SampleUI_SamsungAGV
             this.rfid105.Text = "R105";
             this.rfid105.Visible = false;
             // 
-            // rfidVirtual1
-            // 
-            this.rfidVirtual1.Location = new System.Drawing.Point(1467, 728);
-            this.rfidVirtual1.Name = "rfidVirtual1";
-            this.rfidVirtual1.Size = new System.Drawing.Size(35, 20);
-            this.rfidVirtual1.TabIndex = 209;
-            this.rfidVirtual1.Text = "RV1";
-            this.rfidVirtual1.Visible = false;
-            // 
             // textBox16
             // 
             this.textBox16.BackColor = System.Drawing.Color.PaleGreen;
@@ -1661,7 +1685,7 @@ namespace SampleUI_SamsungAGV
             // 
             // rfid123
             // 
-            this.rfid123.Location = new System.Drawing.Point(1058, 728);
+            this.rfid123.Location = new System.Drawing.Point(1058, 712);
             this.rfid123.Name = "rfid123";
             this.rfid123.Size = new System.Drawing.Size(35, 20);
             this.rfid123.TabIndex = 159;
@@ -1670,7 +1694,7 @@ namespace SampleUI_SamsungAGV
             // 
             // rfid122
             // 
-            this.rfid122.Location = new System.Drawing.Point(1058, 705);
+            this.rfid122.Location = new System.Drawing.Point(1058, 690);
             this.rfid122.Name = "rfid122";
             this.rfid122.Size = new System.Drawing.Size(35, 20);
             this.rfid122.TabIndex = 158;
@@ -1679,7 +1703,7 @@ namespace SampleUI_SamsungAGV
             // 
             // rfid2
             // 
-            this.rfid2.Location = new System.Drawing.Point(1053, 615);
+            this.rfid2.Location = new System.Drawing.Point(1058, 622);
             this.rfid2.Name = "rfid2";
             this.rfid2.Size = new System.Drawing.Size(35, 20);
             this.rfid2.TabIndex = 180;
@@ -1703,7 +1727,7 @@ namespace SampleUI_SamsungAGV
             this.textBox15.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox15.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox15.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox15.Location = new System.Drawing.Point(196, 714);
+            this.textBox15.Location = new System.Drawing.Point(196, 715);
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(95, 17);
             this.textBox15.TabIndex = 203;
@@ -1712,7 +1736,7 @@ namespace SampleUI_SamsungAGV
             // 
             // rfid121
             // 
-            this.rfid121.Location = new System.Drawing.Point(1059, 684);
+            this.rfid121.Location = new System.Drawing.Point(1059, 667);
             this.rfid121.Name = "rfid121";
             this.rfid121.Size = new System.Drawing.Size(35, 20);
             this.rfid121.TabIndex = 157;
@@ -1721,7 +1745,7 @@ namespace SampleUI_SamsungAGV
             // 
             // rfid120
             // 
-            this.rfid120.Location = new System.Drawing.Point(1059, 662);
+            this.rfid120.Location = new System.Drawing.Point(1059, 641);
             this.rfid120.Name = "rfid120";
             this.rfid120.Size = new System.Drawing.Size(33, 20);
             this.rfid120.TabIndex = 156;
@@ -2364,19 +2388,9 @@ namespace SampleUI_SamsungAGV
             this.idleSmd1.TabIndex = 116;
             this.idleSmd1.TabStop = false;
             // 
-            // standbyWip
-            // 
-            this.standbyWip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(128)))));
-            this.standbyWip.Location = new System.Drawing.Point(1110, 650);
-            this.standbyWip.Name = "standbyWip";
-            this.standbyWip.Size = new System.Drawing.Size(108, 315);
-            this.standbyWip.TabIndex = 108;
-            this.standbyWip.TabStop = false;
-            // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel1.Controls.Add(this.rfid13);
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.pictureBox17);
@@ -2387,7 +2401,6 @@ namespace SampleUI_SamsungAGV
             this.panel1.Controls.Add(this.wip10);
             this.panel1.Controls.Add(this.wip11);
             this.panel1.Controls.Add(this.wip12);
-            this.panel1.Controls.Add(this.rfid130);
             this.panel1.Controls.Add(this.pictureBox13);
             this.panel1.Controls.Add(this.textBox13);
             this.panel1.Controls.Add(this.textBox12);
@@ -2411,22 +2424,10 @@ namespace SampleUI_SamsungAGV
             this.panel1.Controls.Add(this.wip6);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.pictureBox25);
-            this.panel1.Controls.Add(this.rfid131);
-            this.panel1.Controls.Add(this.rfid124);
-            this.panel1.Controls.Add(this.rfid125);
             this.panel1.Location = new System.Drawing.Point(145, 730);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1037, 238);
             this.panel1.TabIndex = 164;
-            // 
-            // rfid13
-            // 
-            this.rfid13.Location = new System.Drawing.Point(913, 107);
-            this.rfid13.Name = "rfid13";
-            this.rfid13.Size = new System.Drawing.Size(35, 20);
-            this.rfid13.TabIndex = 287;
-            this.rfid13.Text = "R13";
-            this.rfid13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label6
             // 
@@ -2463,7 +2464,7 @@ namespace SampleUI_SamsungAGV
             // 
             // rfid46
             // 
-            this.rfid46.Location = new System.Drawing.Point(896, 180);
+            this.rfid46.Location = new System.Drawing.Point(914, 180);
             this.rfid46.Name = "rfid46";
             this.rfid46.Size = new System.Drawing.Size(35, 20);
             this.rfid46.TabIndex = 247;
@@ -2578,15 +2579,6 @@ namespace SampleUI_SamsungAGV
             this.wip12.TabStop = false;
             this.wip12.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Custom;
             this.wip12.Visible = false;
-            // 
-            // rfid130
-            // 
-            this.rfid130.Location = new System.Drawing.Point(915, 85);
-            this.rfid130.Name = "rfid130";
-            this.rfid130.Size = new System.Drawing.Size(35, 20);
-            this.rfid130.TabIndex = 241;
-            this.rfid130.Text = "R130";
-            this.rfid130.Visible = false;
             // 
             // pictureBox13
             // 
@@ -2928,34 +2920,6 @@ namespace SampleUI_SamsungAGV
             this.pictureBox25.TabIndex = 135;
             this.pictureBox25.TabStop = false;
             // 
-            // rfid131
-            // 
-            this.rfid131.Location = new System.Drawing.Point(913, 126);
-            this.rfid131.Name = "rfid131";
-            this.rfid131.Size = new System.Drawing.Size(35, 20);
-            this.rfid131.TabIndex = 191;
-            this.rfid131.Text = "R131";
-            this.rfid131.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.rfid131.Visible = false;
-            // 
-            // rfid124
-            // 
-            this.rfid124.Location = new System.Drawing.Point(914, 20);
-            this.rfid124.Name = "rfid124";
-            this.rfid124.Size = new System.Drawing.Size(35, 20);
-            this.rfid124.TabIndex = 160;
-            this.rfid124.Text = "R124";
-            this.rfid124.Visible = false;
-            // 
-            // rfid125
-            // 
-            this.rfid125.Location = new System.Drawing.Point(913, 42);
-            this.rfid125.Name = "rfid125";
-            this.rfid125.Size = new System.Drawing.Size(35, 20);
-            this.rfid125.TabIndex = 161;
-            this.rfid125.Text = "R125";
-            this.rfid125.Visible = false;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(128)))));
@@ -3037,20 +3001,6 @@ namespace SampleUI_SamsungAGV
             this.stopLine1.TabIndex = 17;
             this.stopLine1.TabStop = false;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox3.ImageLocation = "";
-            this.pictureBox3.Location = new System.Drawing.Point(12, 690);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(1490, 278);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox3.TabIndex = 134;
-            this.pictureBox3.TabStop = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3082,9 +3032,9 @@ namespace SampleUI_SamsungAGV
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.bunifuPanel2.ResumeLayout(false);
             this.bunifuPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.agv1Horizontal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.agv1Vertical)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.agv2Horizontal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.agv1Horizontal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.agv2Vertical)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
@@ -3122,7 +3072,6 @@ namespace SampleUI_SamsungAGV
             ((System.ComponentModel.ISupportInitialize)(this.send1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.goLine1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.idleSmd1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.standbyWip)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
@@ -3151,7 +3100,6 @@ namespace SampleUI_SamsungAGV
             ((System.ComponentModel.ISupportInitialize)(this.standby4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.send4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stopLine1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3203,7 +3151,6 @@ namespace SampleUI_SamsungAGV
         private System.Windows.Forms.PictureBox send5;
         private System.Windows.Forms.PictureBox send3;
         private System.Windows.Forms.PictureBox send2;
-        private System.Windows.Forms.PictureBox standbyWip;
         private System.Windows.Forms.Timer timer5;
         private System.Windows.Forms.PictureBox goLine1;
         private System.Windows.Forms.PictureBox stanbyLine1;
@@ -3219,7 +3166,6 @@ namespace SampleUI_SamsungAGV
         private System.Windows.Forms.TextBox tbox3;
         private System.Windows.Forms.TextBox tbox4;
         private System.Windows.Forms.TextBox tbox5;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label labelPosition;
@@ -3230,7 +3176,6 @@ namespace SampleUI_SamsungAGV
         private System.Windows.Forms.TextBox rfid40;
         private System.Windows.Forms.TextBox rfid38;
         private System.Windows.Forms.TextBox rfid125;
-        private System.Windows.Forms.TextBox rfid124;
         private System.Windows.Forms.TextBox rfid123;
         private System.Windows.Forms.TextBox rfid122;
         private System.Windows.Forms.TextBox rfid121;
@@ -3279,7 +3224,6 @@ namespace SampleUI_SamsungAGV
         private System.Windows.Forms.TextBox rfid39;
         private System.Windows.Forms.TextBox rfid41;
         private System.Windows.Forms.TextBox rfid119;
-        private System.Windows.Forms.TextBox rfid131;
         private Bunifu.UI.WinForms.BunifuPictureBox wip7;
         private Bunifu.UI.WinForms.BunifuPictureBox wip8;
         private Bunifu.UI.WinForms.BunifuPictureBox wip9;
@@ -3294,8 +3238,6 @@ namespace SampleUI_SamsungAGV
         private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox rfidVirtual1;
-        private System.Windows.Forms.TextBox rfidVirtual2;
         private System.Windows.Forms.PictureBox goLine2;
         private System.Windows.Forms.Label labelDisconnect;
         private System.Windows.Forms.TextBox rfid112;
@@ -3354,10 +3296,12 @@ namespace SampleUI_SamsungAGV
         private System.Windows.Forms.TextBox textBox14;
         private System.Windows.Forms.TextBox rfid49;
         private System.Windows.Forms.TextBox rfid48;
-        private System.Windows.Forms.PictureBox agv1Horizontal;
         private System.Windows.Forms.PictureBox agv2Horizontal;
-        private System.Windows.Forms.TextBox rfid13;
         private System.Windows.Forms.PictureBox agv1Vertical;
+        private System.Windows.Forms.PictureBox agv1Horizontal;
+        private System.Windows.Forms.TextBox rfid131;
+        private System.Windows.Forms.TextBox rfid124;
+        private System.Windows.Forms.TextBox rfid13;
     }
 }
 
