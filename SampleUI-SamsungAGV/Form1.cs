@@ -38,6 +38,7 @@ namespace SampleUI_SamsungAGV
         public double offTime,offTime2;
         public string on1 = "   ON-1", on2 = "ON-2", off1 = "OFF-1", off2 = "OFF-2";
 
+
         //public string url = "http://localhost:8000/req";
         //public string url = "http://172.16.101.203:8000/req";
         public string url = "http://10.10.100.100:8000/req";
@@ -227,6 +228,9 @@ namespace SampleUI_SamsungAGV
                                                 "30","118","101","116","48","49","102","103",                                                       //to Line 7-12 --- 8rfid
                                                 "104","105","106","107","108,","109","110","111","112","113","114","115" ,"8"};                     //Line 7-12 --- 13rfid
 
+            string[] arrayRFIDHorizontal = new string[] { "128", "129", "126", "127", "119", "1", "117", "11", "56", "54", "53", "52", "31", "32", "30", "118", "101", "116", "48", "49", "102"};
+            string[] arrayRFIDVertical = new string[] { "46", "131", "13", "130", "33", "34", "15", "16", "37", "38", "39", "40", "41", "42", "43", "44", "8", "104", "105", "106", "107", "108,", "109", "110", "111", "112", "113", "114", "115", "8" };
+
             int[] arrayRfidLoc_X = new int[] {rfid128.Location.X,rfid129.Location.X,rfid126.Location.X,rfid127.Location.X,rfid46.Location.X,rfid131.Location.X,rfid13.Location.X,rfid130.Location.X,
                                               rfid125.Location.X,rfid124.Location.X,rfid123.Location.X,rfid122.Location.X,rfid121.Location.X,rfid120.Location.X,rfid2.Location.X,
                                               rfid119.Location.X,rfid1.Location.X,rfid117.Location.X,rfid11.Location.X,rfid56.Location.X,rfid54.Location.X,rfid53.Location.X,rfid52.Location.X,rfid31.Location.X,rfid32.Location.X,
@@ -249,6 +253,7 @@ namespace SampleUI_SamsungAGV
             {
                 //Console.WriteLine("missionC.missionGetActiveList()");
                 List<AGVCallingModel> showData = new List<AGVCallingModel>();
+                List<AGV2CallingModel> showData2 = new List<AGV2CallingModel>();
                 string lastTIme = "";
                 for (int i = 0; i < data.msg.Count; i++)
                 {
@@ -338,6 +343,7 @@ namespace SampleUI_SamsungAGV
             if (data.errMark == "OK")
             {
                 List<AGVStatusModel> showData = new List<AGVStatusModel>();
+                //List<AGV2StatusModel> showData2 = new List<AGV2StatusModel>();
                 for (int i = 0; i < data.msg.Count; i++)
                 {
                     double power = data.msg[i][7];
@@ -348,36 +354,53 @@ namespace SampleUI_SamsungAGV
                     string searchRFID = dataRfid.ToString();
                     //Console.WriteLine(searchRFID);
                     //Console.WriteLine(dataRfid);
-                    int indexRFID = Array.IndexOf(arrayRFID, searchRFID);
 
                     agvStatus = dataMovement.ToString();
                     agvRoute = dataRute.ToString();
-                    agvRfid = dataRfid.ToString();
-                    
-                    if(i == 0)
+                    int agvRfid = (int)dataRfid;
+                    Console.WriteLine(arrayRFIDHorizontal);
+
+
+                    if (i == 0)
                     {
-                        Console.WriteLine("RFID AGV1 = {0}",dataRfid);
-                        Console.WriteLine("Alamat AGV = {0}",readAddress);
                         batteryLevel1.Value = (int)power;
                         batValue1.Text = power.ToString();
-
+                        int indexRFID = Array.IndexOf(arrayRFID, searchRFID);
+                        Console.WriteLine(indexRFID);
                     }
 
                     if (i == 1)
                     {
-                        Console.WriteLine("RFID AGV2 = {0}",dataRfid);
-                        Console.WriteLine("Alamat AGV = {0}",readAddress);
                         batteryLevel2.Value = (int)power;
                         batValue2.Text = power.ToString();
                     }
 
-                    if (readAddress == 1 && readType == "车")
+
+                    if (readAddress == 1 && readType == "车" && i == 0)
                     {
                         if (dataMovement == 0) { agvStatus = "STOP"; }
                         else if (dataMovement == 1) { agvStatus = "PAUSE"; }
                         else if (dataMovement == 2) { agvStatus = "RUN"; }
                         else { }
 
+                        batteryLevel1.Value = (int)power;
+                        batValue1.Text = power.ToString();
+
+                        int indexRFID1 = Array.IndexOf(arrayRFID, searchRFID);
+                        Console.WriteLine(indexRFID1);
+                        labelPosition.Text = arrayPosition[indexRFID1];
+
+
+                        //Clean Code for Image Positioning
+                        if(Array.Exist)
+                        {
+                            agv1Horizontal.Left = arrayRfidLoc_X[agvRfid];
+                            agv1Horizontal.Top = arrayRfidLoc_Y[agvRfid];
+                            agv1Horizontal.Visible = true;
+                        }
+
+                        else if(dataRfid == 131 || dataRfid == 131 || dataRfid == 13 || dataRfid == 130 || dataRfid == 125 || dataRfid == 124 || dataRfid == 123 || dataRfid == 124)
+                        
 
                         //Image Positioning
                         if (dataRfid == 129)
@@ -387,35 +410,35 @@ namespace SampleUI_SamsungAGV
                             agv1Horizontal.Visible = true;
                             agv1Vertical.Visible = false;
                         }
-                        else if(dataRfid == 127)
+                        else if (dataRfid == 127)
                         {
                             agv1Horizontal.Left = rfid127.Left;
                             agv1Horizontal.Top = rfid127.Top;
                             agv1Horizontal.Visible = true;
                             agv1Vertical.Visible = false;
                         }
-                        else if(dataRfid == 131)
+                        else if (dataRfid == 131)
                         {
                             agv1Vertical.Top = rfid131.Top;
                             agv1Vertical.Left = rfid131.Left;
                             agv1Vertical.Visible = true;
                             agv1Horizontal.Visible = false;
                         }
-                        else if(dataRfid == 13)
+                        else if (dataRfid == 13)
                         {
                             agv1Vertical.Top = rfid13.Top;
                             agv1Vertical.Left = rfid13.Left;
                             agv1Vertical.Visible = true;
                             agv1Horizontal.Visible = false;
                         }
-                        else if(dataRfid == 130)
+                        else if (dataRfid == 130)
                         {
                             agv1Vertical.Top = rfid130.Top;
                             agv1Vertical.Left = rfid130.Left;
                             agv1Vertical.Visible = true;
                             agv1Horizontal.Visible = false;
                         }
-                        else if(dataRfid == 125)
+                        else if (dataRfid == 125)
                         {
                             agv1Vertical.Top = rfid125.Top;
                             agv1Vertical.Left = rfid125.Left;
@@ -534,6 +557,7 @@ namespace SampleUI_SamsungAGV
                             agv1Horizontal.Visible = true;
                             agv1Vertical.Visible = false;
                         }
+
                         //Image Positioning ends here
 
                         if (dataRute == 1 || dataRute == 3 || dataRute == 4 || dataRute == 5 || dataRute == 6 || dataRute ==7)
@@ -713,10 +737,10 @@ namespace SampleUI_SamsungAGV
                             //agv1Vertical.Top = arrayRfidLoc_Y[indexRFID];
                         }
                         AGVStatusModel temp = new AGVStatusModel(agvName, agvState, agvStatus.ToString());
-                        AGV2StatusModel temp2 = new AGV2StatusModel(agv2Name, agv2State, agv2Status.ToString());
-                        showData.Add(temp2);
+                        //AGV2StatusModel temp2 = new AGV2StatusModel(agv2Name, agv2State, agv2Status.ToString());
+                        showData.Add(temp);
                         gridViewStatus.Invoke((MethodInvoker)delegate { gridViewStatus.DataSource = showData; });
-                        //showData.Add(temp2);
+                        //showData2.Add(temp2);
                         Console.WriteLine("agvState : {0}",agvState);
                     }
                     else if(readAddress == 2 && readType == "车")
