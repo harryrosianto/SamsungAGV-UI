@@ -8,8 +8,8 @@ UI project to monitor the movement of Automated Guided Vehicle using Visual Stud
 ### Built With
 
 * [Uvicorn](https://www.uvicorn.org/) - Uvicorn FastAPI (Python Web Framework)
-* [Visual Sttudio](https://visualstudio.microsoft.com/) - Visual Studio
-* [Bunifu Framework](https://bunifuframework.com/) - Bunifu Framework
+* [Visual Sttudio](https://visualstudio.microsoft.com/) - Visual Studio integrated development environment (IDE)
+* [Bunifu Framework](https://bunifuframework.com/) - Bunifu Framework UI tools
 
 ### Prerequisites
 
