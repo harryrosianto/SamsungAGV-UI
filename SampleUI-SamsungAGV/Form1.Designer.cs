@@ -3403,4 +3403,3 @@ namespace SampleUI_SamsungAGV
         private System.Windows.Forms.PictureBox send8;
     }
 }
-
