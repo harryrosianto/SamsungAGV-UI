@@ -35,4 +35,4 @@ cd "<your directory>\.NEW_VERSION\bin\Debug"
 start SampleUI-SamsungAGV.exe
 ```
 
-change the <your directory> according to the directory where you save all the AGV files
+change the `<your directory>` according to the directory where you save all the AGV files
