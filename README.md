@@ -22,5 +22,35 @@ Function dependencies used in this project:
 - Pydantic 1.8.2
 - Requests 2.27.1
 
+### Run Application
+start AGV Server
+```
+..\run\python m_fileServer.pyc
+pause
+```
 
+start web API
+```
+..\run\python m_webApi.pyc
+pause
+```
+
+start backend python
+```
+cd "<your directory>\.NEW_VERSION\"
+python backendPython.py
+```
+
+start all in one application
+```
+cd "<your directory>\.NEW_VERSION\agv\"
+start AGVServer.bat
+cd "<your directory>\.NEW_VERSION\agv\"
+start webApi.bat
+cd "<your directory>\.NEW_VERSION\"
+start python backendPython.py
+cd "<your directory>\.NEW_VERSION\bin\Debug"
+start SampleUI-SamsungAGV.exe
+```
+change the `<your directory>` according to the directory where you save all the AGV files
 
