@@ -56,5 +56,5 @@ change the `<your directory>` according to the directory where you save all the 
 
 ### Possible Issues
 
-- UI doesn't show AGV Data
+- UI doesn't show AGV Data.
 This can be caused by the AGV that has just been revived from a dead condition so that the data from the AGV has not responded. When this problem occurs, just run AGV with any mission/route. Then the AGV will automatically send data to the monitoring UI via the API (Application Programming Interface).
