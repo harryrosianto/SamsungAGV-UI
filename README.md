@@ -5,6 +5,9 @@ UI project to monitor the movement of Automated Guided Vehicle using Visual Stud
 ### Proposed Design
 ![](Final_UI_Design.jpg)
 
+### UI Explanation
+![](Training Slide 8.png)
+
 ### Built With
 
 * [Uvicorn](https://www.uvicorn.org/) - Uvicorn FastAPI (Python Web Framework)
