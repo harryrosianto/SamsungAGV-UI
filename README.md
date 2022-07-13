@@ -64,7 +64,11 @@ This can be caused by the AGV that has just been revived from a dead condition s
 
 
 - Cross-Thread Error
+
+
 ![](gitIssue1.png)
+
+
 Solution for this issue
 
 ```
