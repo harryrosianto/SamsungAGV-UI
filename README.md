@@ -65,7 +65,7 @@ This can be caused by the AGV that has just been revived from a dead condition s
 
 - Cross-Thread Error
 <p align="center">
-  <img width="460" "GitIssue1.png">
+  <img width="460" height="300" "GitIssue1.png">
 </p>
 Solution for this issue
 
@@ -94,7 +94,7 @@ private async void callAPI()
 
 - NullReferenceException
 <p align="center">
-  <img width="460" "GitIssue2.png">
+  <img width="460" height="300" "GitIssue2.png">
 </p>
 Solution for this issue
 
