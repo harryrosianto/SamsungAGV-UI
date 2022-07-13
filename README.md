@@ -93,13 +93,9 @@ private async void callAPI()
 ```
 
 - NullReferenceException
-
-
 <p align="center">
-  <img width="460" src="gitIssue2.png">
+  <img width="460" height="300" src="gitIssue2.png">
 </p>
-
-
 Solution for this issue
 
 ```
