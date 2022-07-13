@@ -61,3 +61,61 @@ change the `<your directory>` according to the directory where you save all the 
 
 - UI doesn't show AGV Data.
 This can be caused by the AGV that has just been revived from a dead condition so that the data from the AGV has not responded. When this problem occurs, just run AGV with any mission/route. Then the AGV will automatically send data to the monitoring UI via the API (Application Programming Interface).
+
+
+- Cross-Thread Error
+<p align="center">
+  <img width="460" src="gitIssue1.png">
+</p>
+Solution for this issue
+
+```
+private async void callAPI()        
+{
+   .
+   .
+   .
+   
+   batteryLevel1.Value = (int)power;
+
+   if (batValue1.InvokeRequired)                        
+   {                            
+       batValue1.Invoke(new Action(callAPI));                              
+       return;                        
+   }                        
+
+   batValue1.Text = power.ToString();
+   .
+   .
+   .
+
+}
+```
+
+- NullReferenceException
+<p align="center">
+  <img width="460" src="gitIssue2.png">
+</p>
+Solution for this issue
+
+```
+try                
+{                    
+    btnState = datanonArray.msg[1];                
+}                
+
+catch(NullReferenceException)                
+{                    
+    btnState = 1;                
+}                
+
+try                
+{                    
+    btnState2 = datanonArray2.msg[1];                
+}                
+
+catch (NullReferenceException)                
+{                    
+    btnState2 = 1;                
+}
+```
