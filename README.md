@@ -64,9 +64,7 @@ This can be caused by the AGV that has just been revived from a dead condition s
 
 
 - Cross-Thread Error
-<p align="center">
-  <img width="460" src="gitIssue1.png">
-</p>
+![](gitIssue1.png)
 Solution for this issue
 
 ```
