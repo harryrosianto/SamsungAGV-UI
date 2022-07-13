@@ -43,6 +43,8 @@ namespace SampleUI_SamsungAGV
         public string on1 = "   ON-1", on2 = "ON-2", off1 = "OFF-1", off2 = "OFF-2";
         public long btnState;
         public long btnState2;
+        public long obsState;
+        public long obsState2;
         public string errorCode, errorCode2, errorTime, errorTime2;
 
         //public string url = "http://localhost:8000/req";
@@ -407,6 +409,7 @@ namespace SampleUI_SamsungAGV
                         agv1Vertical.BackColor = agvColor;
                         agv1Horizontal.BackColor = agvColor;
                         AGV1StatusLabel.Text = agvStatus;
+
                         batteryLevel1.Value = (int)power;
 
                         if (batValue1.InvokeRequired)
@@ -430,9 +433,9 @@ namespace SampleUI_SamsungAGV
                         //}
                         //else if(verticalTarget == true)
                         //{
-                        //    agv1Vertical.Left = arrayRfidLoc_X[agvRfid];
-                        //    agv1Vertical.Top = arrayRfidLoc_Y[agvRfid];
-                        //    agv1Vertical.Visible = true;
+                        //  agv1Vertical.Left = arrayRfidLoc_X[agvRfid];
+                        //   agv1Vertical.Top = arrayRfidLoc_Y[agvRfid];
+                        //   agv1Vertical.Visible = true;
                         //}
                         //else
                         //{
@@ -1162,7 +1165,9 @@ namespace SampleUI_SamsungAGV
                     {
                         agvState = "OFF";
                         string disc = "AGV-1" + " DISCONNECTED";
+                        AGV1NameLabel.Text = agvName;
                         Console.WriteLine(disc);
+                        AGV1StateLabel.Text = agvState;
                         labelDisconnect.Text = disc;
                         labelDisconnect.Visible = true;
                     }
@@ -1174,11 +1179,23 @@ namespace SampleUI_SamsungAGV
                         AGV1StateLabel.Text = "ON";
                         labelDisconnect.Visible = false;
                     }
+                    else
+                    {
+                        agvState = "OFF";
+                        AGV1NameLabel.Text = agvName;
+                        string disc = "AGV-1" + " DISCONNECTED";
+                        Console.WriteLine(disc);
+                        AGV1StateLabel.Text = agvState;
+                        labelDisconnect.Text = disc;
+                        labelDisconnect.Visible = true;
+                    }
                     if ((agvAddress2 == 2) && readType == "车" && offTime2 >= 10)
                     {
                         agv2State = "OFF";
                         string disc = "AGV-2" + " DISCONNECTED";
+                        AGV2NameLabel.Text = agv2Name;
                         Console.WriteLine(disc);
+                        AGV2StateLabel.Text = agv2State;
                         labelDisconnect.Text = disc;
                         labelDisconnect.Visible = true;
                     }
@@ -1190,20 +1207,43 @@ namespace SampleUI_SamsungAGV
                         //labelDisconnect.Visible = false;
                     }
                     else {
-                        Console.Write("Ada kesalahan ");
+                        agv2State = "OFF";
+                        string disc = "AGV-2" + " DISCONNECTED";
+                        AGV2NameLabel.Text = agv2Name;
+                        Console.WriteLine(disc);
+                        AGV2StateLabel.Text = agv2State;
+                        labelDisconnect.Text = disc;
+                        labelDisconnect.Visible = true;
                     }
                     
                 }
 
                 List<AGVErrorModel> showError = new List<AGVErrorModel>();
+                errorTime = DateTime.Now.ToString();
+                errorTime2 = DateTime.Now.ToString();
                 ResponseData2 datanonArray = await APInonArray("devC.deviceDic[1].optionsLoader.load(carLib.RAM.DEV.BTN_EMC)");
                 ResponseData2 datanonArray2 = await APInonArray("devC.deviceDic[2].optionsLoader.load(carLib.RAM.DEV.BTN_EMC)");
 
-                btnState = datanonArray.msg[1];
-                btnState2 = datanonArray2.msg[1];
-                
-                Console.WriteLine("Kondisi 1 adalah: {0}", btnState);
-                Console.WriteLine("Kondisi 2 adalah: {0}", btnState2);
+
+                try
+                {
+                    btnState = datanonArray.msg[1];
+                }
+                catch(NullReferenceException)
+                {
+                    btnState = 1;
+                }
+
+                try
+                {
+                    btnState2 = datanonArray2.msg[1];
+                }
+                catch (NullReferenceException)
+                {
+                    btnState2 = 1;
+                }
+                //Console.WriteLine("Kondisi 1 adalah: {0}", btnState);
+                //Console.WriteLine("Kondisi 2 adalah: {0}", btnState2);
 
                 if (datanonArray.errMark == "OK")
                 {
@@ -1226,31 +1266,7 @@ namespace SampleUI_SamsungAGV
                     errorTime = "";
                     errorCode = "";
                 }
-                //==================================================================================================================================// --> API5
-                //ResponseData2 nonArrayOBS = await APInonArray("devC.deviceDic[1].optionsLoader.load(carLib.RAM.DEV.OBS)");
-                //ResponseData2 nonArrayOBS2 = await APInonArray("devC.deviceDic[2].optionsLoader.load(carLib.RAM.DEV.OBS)");
-                                 //if (nonArrayOBS.errMark == "OK")
-                //{
-                //    //List<AGVErrorModel> showError = new List<AGVErrorModel>();
-                    
-                //    long obsState = nonArrayOBS.msg[2];
-                //    //long obsState2 = nonArrayOBS2.msg[2];
-                //
-                //    if (obsState == 7)
-                //    {
-                //        obsCode = "OBS STOP";
-                //        agv1Horizontal.BackColor = Color.Red;
-                //        agv1Vertical.BackColor = Color.Red;
-                //   }
-                //    else
-                //    { 
-                //        obsCode = "-";
-                //        agv1Vertical.BackColor = agvColor;
-                //        agv1Horizontal.BackColor = agvColor;
-                //   }
-                //}
-                //updateError = 0;
-                
+
                 if (datanonArray2.errMark == "OK")
                 {
                     errorTime2 = DateTime.Now.ToString();
@@ -1272,9 +1288,77 @@ namespace SampleUI_SamsungAGV
                     errorTime2 = "";
                     errorCode2 = "";
                 }
-                                  
+                //==================================================================================================================================// --> API5
+
+                ResponseData2 nonArrayOBS = await APInonArray("devC.deviceDic[1].optionsLoader.load(carLib.RAM.DEV.OBS)");
+                ResponseData2 nonArrayOBS2 = await APInonArray("devC.deviceDic[2].optionsLoader.load(carLib.RAM.DEV.OBS)");
+
+                try
+                {
+                    obsState = nonArrayOBS.msg[2];
+                }
+                catch (NullReferenceException)
+                {
+                    obsState = 3;
+                }
+
+                try
+                {
+                    obsState2 = nonArrayOBS2.msg[2];
+                }
+                catch (NullReferenceException)
+                {
+                    obsState2 = 3;
+                }
+
+                if (nonArrayOBS.errMark == "OK")
+                {
+
+                    if (obsState == 7)
+                    {
+                        obsCode = "OBS STOP";
+                        agv1Horizontal.BackColor = Color.Red;
+                        agv1Vertical.BackColor = Color.Red;
+                   }
+                    else
+                    { 
+                        obsCode = "-";
+                        agv1Vertical.BackColor = agvColor;
+                        agv1Horizontal.BackColor = agvColor;
+                   }
+                }
+                else
+                {
+                    errorTime = "";
+                    obsCode = "";
+                }
+
+                if (nonArrayOBS2.errMark == "OK")
+                {
+                    if (obsState2 == 7)
+                    {
+                        obsCode2 = "OBS STOP";
+                        agv1Horizontal.BackColor = Color.Red;
+                        agv1Vertical.BackColor = Color.Red;
+                   }
+                    else
+                    { 
+                        obsCode2 = "-";
+                        agv1Vertical.BackColor = agvColor;
+                        agv1Horizontal.BackColor = agvColor;
+                   }
+                }
+                else
+                {
+                    errorTime2 = "";
+                    obsCode2 = "";
+                }
+                updateError = 0;
+
+                Console.WriteLine("Kondisi OBS 1: {0}", obsState);
+                Console.WriteLine("Kondisi OBS 2: {0}", obsState2);
                 AGVErrorModel temp = new AGVErrorModel(errorTime, agvName, errorCode, obsCode);
-                AGVErrorModel temp2 = new AGVErrorModel(errorTime2, agv2Name, errorCode2, obsCode);
+                AGVErrorModel temp2 = new AGVErrorModel(errorTime2, agv2Name, errorCode2, obsCode2);
                 showError.Add(temp);
                 showError.Add(temp2);
                 gridViewError.Invoke((MethodInvoker)delegate { gridViewError.DataSource = showError; });
