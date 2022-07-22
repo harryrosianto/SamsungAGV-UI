@@ -46,10 +46,27 @@ namespace SampleUI_SamsungAGV
         public long obsState;
         public long obsState2;
         public string errorCode, errorCode2, errorTime, errorTime2;
-
+        public int traffic1;
+        
         //public string url = "http://localhost:8000/req";
         //public string url = "http://172.16.101.203:8000/req";
         public string url = "http://10.10.100.100:8000/req";
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void clearButton_CheckedChanged2(object sender, Bunifu.UI.WinForms.BunifuRadioButton.CheckedChangedEventArgs e)
+        {
+
+        }
+
+        private void trafficButton_Click(object sender, EventArgs e)
+        {
+            traffic1 = 1;
+        }
+
         //public string url = "http://192.168.77.220:8000/req";
         private double batScale(double value, double min, double max, double minScale, double maxScale)
         {
@@ -273,10 +290,15 @@ namespace SampleUI_SamsungAGV
                     jobId = data.msg[i][0];
                     lastTIme = agvTime;
                     string SMDdata = data.msg[i][1].ToString();
+
                     bool AGV1Deliver = arrayMachine1.Contains(SMDdata);
                     bool AGV2Deliver = arrayMachine2.Contains(SMDdata);
                     //string text = System.IO.File.ReadAllText(@"D:\WORK\SAMSUNG\SampleUI-SamsungAGV\log.txt");
                     //string[] lines = System.IO.File.ReadAllLines(@"D:\WORK\SAMSUNG\SampleUI-SamsungAGV\log.txt");
+
+                    Console.WriteLine(data.msg[i][1]);
+                    Console.WriteLine(traffic1);
+
 
                     if (AGV1Deliver == true)
                     {
@@ -285,6 +307,11 @@ namespace SampleUI_SamsungAGV
                     else if (AGV2Deliver == true)
                     {
                         AGVUniversalName = agv2Name;
+                    }
+
+                    if (traffic1 == 1)
+                    {
+                        data.msg[i][1] = "CLEAR TRAFFIC";
                     }
 
                     if (counterLog < 11)
@@ -1183,7 +1210,7 @@ namespace SampleUI_SamsungAGV
                     {
                         agvState = "OFF";
                         AGV1NameLabel.Text = agvName;
-                        string disc = "AGV-1" + " DISCONNECTED";
+                        string disc = "AGV-1" + " DISCONNECTED but strange";
                         Console.WriteLine(disc);
                         AGV1StateLabel.Text = agvState;
                         labelDisconnect.Text = disc;
@@ -1196,15 +1223,15 @@ namespace SampleUI_SamsungAGV
                         AGV2NameLabel.Text = agv2Name;
                         Console.WriteLine(disc);
                         AGV2StateLabel.Text = agv2State;
-                        labelDisconnect.Text = disc;
-                        labelDisconnect.Visible = true;
+                        labelDisconnect1.Text = disc;
+                        labelDisconnect1.Visible = true;
                     }
                     else if (agvAddress2 == 2 && readType == "车" && offTime2 < 0.3)
                     {
                         agv2State = "ON";
                         AGV2NameLabel.Text = agv2Name;
                         AGV2StateLabel.Text = "ON";
-                        //labelDisconnect.Visible = false;
+                        labelDisconnect1.Visible = false;
                     }
                     else {
                         agv2State = "OFF";
@@ -1212,8 +1239,8 @@ namespace SampleUI_SamsungAGV
                         AGV2NameLabel.Text = agv2Name;
                         Console.WriteLine(disc);
                         AGV2StateLabel.Text = agv2State;
-                        labelDisconnect.Text = disc;
-                        labelDisconnect.Visible = true;
+                        labelDisconnect1.Text = disc;
+                        labelDisconnect1.Visible = true;
                     }
                     
                 }
